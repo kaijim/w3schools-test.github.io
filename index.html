@@ -6,152 +6,184 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <style>
-html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
-.w3-tag {height:15px;width:15px;padding:0;margin-top:6px;cursor:pointer}
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Lato", sans-serif
+  }
+
+  .w3-tag {
+    height: 15px;
+    width: 15px;
+    padding: 0;
+    margin-top: 6px;
+    cursor: pointer
+  }
 </style>
 <style>
-.body_fahr {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 50vh;
-  background-color: #f0f0f0;
-}
-
-.fahr_heart-banner {
-  text-align: center;
-  position: relative;
-}
-
-.fahr_heart-banner p {
-  position: absolute;
-  z-index: 3; /* gray box will be above both green and black box */
-  height: 60px;  
-  width: 100%;
-  left: -30px;
-  top: 40px;
-  color: white;
-    
-}
-
-.fahr_heart {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  animation: heartbeat 1.5s ease-in-out infinite;
-}
-
-.fahr_heart:before,
-.fahr_heart:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 100px;
-  height: 180px;
-  border-radius: 50px 50px 0 0;
-  background-color: #4CAF50;
-}
-
-.fahr_heart:before {
-  left: -55px;
-  transform: rotate(-45deg);
-}
-
-.fahr_heart:after {
-  left: 0;
-  transform: rotate(45deg);
-}
-
-@keyframes heartbeat {
-  0%, 100% {
-    transform: scale(1);
+  .div_fahr {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
   }
-  50% {
-    transform: scale(1.1);
+
+  .fahr_heart-banner {
+    text-align: center;
+    position: relative;
   }
-}
+
+  .fahr_heart-banner p {
+    position: absolute;
+    z-index: 3;
+    height: 60px;
+    width: 100%;
+    left: -30px;
+    top: 40px;
+    color: white;
+
+  }
+
+  .fahr {
+    position: relative;
+    left: -300px;
+    top: 200px;
+    color: green;
+  }
+
+  .fahr_heart {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: heartbeat 1.5s ease-in-out infinite;
+  }
+
+  .fahr_heart:before,
+  .fahr_heart:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 180px;
+    border-radius: 50px 50px 0 0;
+    background-color: #4CAF50;
+  }
+
+  .fahr_heart:before {
+    left: -55px;
+    transform: rotate(-45deg);
+  }
+
+  .fahr_heart:after {
+    left: 0;
+    transform: rotate(45deg);
+  }
+
+  @keyframes heartbeat {
+
+    0%,
+    100% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.1);
+    }
+  }
 </style>
+
 <body>
 
-<!-- Content -->
-<div class="w3-content" style="max-width:1920px;margin-top:40px;margin-bottom:40px">
+  <!-- Content -->
+  <div class="w3-content" style="max-width:1920px;margin-top:40px;margin-bottom:40px">
 
-  <div class="w3-panel">
-    <h1><b>GIT TUTORIAL GUESTBOOK</b></h1>
-  </div>
+    <div class="w3-panel">
+      <h1><b>GIT TUTORIAL GUESTBOOK</b></h1>
+    </div>
 
-  <!-- Slideshow -->
-  <div class="w3-container">
-    <div class="w3-display-container">
-      <img src="img_guestbook_wall.jpg" alt="Image from Nicolas Dmítrichev via unsplash.com" style="width:100%">
-      <div class="w3-display-topleft w3-container w3-padding-32">
-        <span class="w3-white w3-padding-large w3-animate-bottom">Share your message with the community</span>
+    <!-- Slideshow -->
+    <div class="w3-container">
+      <div class="w3-display-container">
+        <img src="img_guestbook_wall.jpg" alt="Image from Nicolas Dmítrichev via unsplash.com" style="width:100%">
+        <div class="w3-display-topleft w3-container w3-padding-32">
+          <span class="w3-white w3-padding-large w3-animate-bottom">Share your message with the community</span>
+        </div>
       </div>
     </div>
+
+    <!-- Grid -->
+    <div class="w3-row w3-container">
+      <div class="w3-center w3-padding-64">
+        <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">What is This?</span>
+      </div>
+      <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+        <h3>Learn</h3>
+        <p>Learn how to use Git and GitHub from our <a href="https://www.w3schools.com/git/default.asp"
+            title="w3schools.com Git Tutorial" target="_blank" class="w3-hover-text-green">Git Tutorial</a>.</p>
+      </div>
+
+      <div class="w3-col l3 m6 w3-grey w3-container w3-padding-16">
+        <h3>Change</h3>
+        <p>Fork and Clone this <a href="https://github.com/w3schools-test/w3schools-test.github.io"
+            title="Guestbook Git Repository" target="_blank" class="w3-hover-text-green">GitHub repository</a>, to your
+          local Git or GitHub account.</p>
+      </div>
+
+      <div class="w3-col l3 m6 w3-dark-grey w3-container w3-padding-16">
+        <h3>Collaborate</h3>
+        <p>Add a message, following the guidelines from the <a
+            href="https://github.com/w3schools-test/w3schools-test.github.io" title="Guestbook Git Repository"
+            target="_blank" class="w3-hover-text-green">README.md</a>.</p>
+      </div>
+
+      <div class="w3-col l3 m6 w3-black w3-container w3-padding-16">
+        <h3>Contribute</h3>
+        <p>Add a <a href="https://github.com/w3schools-test/w3schools-test.github.io/pulls" title="GitHub Pull Request"
+            target="_blank" class="w3-hover-text-green">pull request</a>, and see if your change gets approved and added
+          below!</p>
+      </div>
+    </div>
+
+
+    <!-- Grid -->
+    <div class="w3-row-padding" id="about">
+      <div class="w3-center w3-padding-64">
+        <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Leave A Message</span>
+      </div>
+
+      <!-- Insert your message below here -->
+
+      <!-- Example message -->
+      <div class="div_fahr">
+        <div class="fahr_heart-banner">
+          <p>¡Gracias!<br> W3Schools por proporcionar información valiosa.</p>
+          <div class="fahr_heart"></div>
+        </div>
+        <div>
+          <p class="fahr">FAHR: 13/08/2023.</p>
+        </div>
+      </div>
+
+      <!-- End user messages -->
+
+    </div>
   </div>
-  
-  <!-- Grid -->
-  <div class="w3-row w3-container">
-    <div class="w3-center w3-padding-64">
-      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">What is This?</span>
-    </div>
-    <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
-      <h3>Learn</h3>
-      <p>Learn how to use Git and GitHub from our <a href="https://www.w3schools.com/git/default.asp" title="w3schools.com Git Tutorial" target="_blank" class="w3-hover-text-green">Git Tutorial</a>.</p>
-    </div>
 
-    <div class="w3-col l3 m6 w3-grey w3-container w3-padding-16">
-      <h3>Change</h3>
-      <p>Fork and Clone this <a href="https://github.com/w3schools-test/w3schools-test.github.io" title="Guestbook Git Repository" target="_blank" class="w3-hover-text-green">GitHub repository</a>, to your local Git or GitHub account.</p>
-    </div>
+  <!-- Footer -->
 
-    <div class="w3-col l3 m6 w3-dark-grey w3-container w3-padding-16">
-      <h3>Collaborate</h3>
-      <p>Add a message, following the guidelines from the <a href="https://github.com/w3schools-test/w3schools-test.github.io" title="Guestbook Git Repository" target="_blank" class="w3-hover-text-green">README.md</a>.</p>
-    </div>
-
-    <div class="w3-col l3 m6 w3-black w3-container w3-padding-16">
-      <h3>Contribute</h3>
-      <p>Add a <a href="https://github.com/w3schools-test/w3schools-test.github.io/pulls" title="GitHub Pull Request" target="_blank" class="w3-hover-text-green">pull request</a>, and see if your change gets approved and added below!</p>
-    </div>
-  </div>
-
-  
-  <!-- Grid -->
-  <div class="w3-row-padding" id="about">
-    <div class="w3-center w3-padding-64">
-      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Leave A Message</span>
-    </div>
-    
-    <!-- Insert your message below here -->
-<div class="body_fahr">
-<div class="fahr_heart-banner">
-  <p>¡Gracias!<br> W3Schools por proporcionar información valiosa.</p>
-  <div class="fahr_heart"></div>
-</div><p>fahr</p>
-</div>
-
-    
-    <!-- Example message -->
-    <div class="w3-panel w3-leftbar w3-light-grey">
-      <p class="w3-xlarge w3-serif"><i>"Make it as simple as possible, but not simpler."</i></p>
-      <p>Albert Einstein</p>
-    </div>
-    
-    <!-- End user messages -->
-    
-  </div>
-</div>
-
-<!-- Footer -->
-
-<footer class="w3-container w3-padding-32 w3-light-grey w3-center">
-  <a href="#" class="w3-button w3-black w3-margin">To the top</a>
-  <p>Note: </p>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
+  <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+    <a href="#" class="w3-button w3-black w3-margin">To the top</a>
+    <p>Note: </p>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+        class="w3-hover-text-green">w3.css</a></p>
+  </footer>
 
 </body>
+
 </html>
