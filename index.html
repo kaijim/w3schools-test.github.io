@@ -2,12 +2,76 @@
 <html>
 <title>Git Tutorial Guestbook</title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <style>
 html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 .w3-tag {height:15px;width:15px;padding:0;margin-top:6px;cursor:pointer}
+</style>
+<style>
+.body_fahr {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  background-color: #f0f0f0;
+}
+
+.fahr_heart-banner {
+  text-align: center;
+  position: relative;
+}
+
+.fahr_heart-banner p {
+  position: absolute;
+  z-index: 3; /* gray box will be above both green and black box */
+  height: 60px;  
+  width: 100%;
+  left: -30px;
+  top: 40px;
+  color: white;
+    
+}
+
+.fahr_heart {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.fahr_heart:before,
+.fahr_heart:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 180px;
+  border-radius: 50px 50px 0 0;
+  background-color: #4CAF50;
+}
+
+.fahr_heart:before {
+  left: -55px;
+  transform: rotate(-45deg);
+}
+
+.fahr_heart:after {
+  left: 0;
+  transform: rotate(45deg);
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
 </style>
 <body>
 
@@ -62,6 +126,13 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
     </div>
     
     <!-- Insert your message below here -->
+<div class="body_fahr">
+<div class="fahr_heart-banner">
+  <p>¡Gracias!<br> W3Schools por proporcionar información valiosa.</p>
+  <div class="fahr_heart"></div>
+</div><p>fahr</p>
+</div>
+
     
     <!-- Example message -->
     <div class="w3-panel w3-leftbar w3-light-grey">
