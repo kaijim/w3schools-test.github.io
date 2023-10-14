@@ -23,80 +23,7 @@
     cursor: pointer
   }
 </style>
-<style>
-  .div_fahr {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f0f0f0;
-  }
 
-  .fahr_heart-banner {
-    text-align: center;
-    position: relative;
-  }
-
-  .fahr_heart-banner p {
-    position: absolute;
-    z-index: 3;
-    height: 60px;
-    width: 100%;
-    left: -30px;
-    top: 40px;
-    color: white;
-
-  }
-
-  .fahr {
-    position: relative;
-    left: -300px;
-    top: 200px;
-    color: green;
-  }
-
-  .fahr_heart {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    animation: heartbeat 1.5s ease-in-out infinite;
-  }
-
-  .fahr_heart:before,
-  .fahr_heart:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 100px;
-    height: 180px;
-    border-radius: 50px 50px 0 0;
-    background-color: #4CAF50;
-  }
-
-  .fahr_heart:before {
-    left: -55px;
-    transform: rotate(-45deg);
-  }
-
-  .fahr_heart:after {
-    left: 0;
-    transform: rotate(45deg);
-  }
-
-  @keyframes heartbeat {
-
-    0%,
-    100% {
-      transform: scale(1);
-    }
-
-    50% {
-      transform: scale(1.1);
-    }
-  }
-</style>
 
 <body>
 
@@ -162,7 +89,7 @@
       <!-- Example message -->
       <div class="div_fahr">
         <div class="fahr_heart-banner">
-          <p>¡Gracias!<br> W3Schools por proporcionar información valiosa.</p>
+          <p>¡Gracias!<br> W3Schools</p>
           <div class="fahr_heart"></div>
         </div>
         <div>
